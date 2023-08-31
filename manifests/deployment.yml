@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: evansdokcerglpiap 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: evansdokcerglpiap
+  template:
+    metadata:
+      labels:
+        app: evansdokcerglpiap 
+    spec:
+      containers:
+        - name: evansdokcerglpiap 
+          image: eforder.azurecr.io/evansdokcerglpiap
+          ports:
+          - containerPort: 80
